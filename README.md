@@ -1,49 +1,46 @@
-CME Detection using Isolation Forest
-Detect Coronal Mass Ejection (CME) events from solar observation CDF files using unsupervised anomaly detection.
-This project leverages NASA's space weather datasets and machine learning to automatically flag unusual proton flux patterns in specific energy bins.
+# 🌌 CME Detection using Isolation Forest
 
+Detect **Coronal Mass Ejection (CME)** events from solar observation CDF files using **unsupervised anomaly detection**.  
+This project leverages **Aditya-L1's ASPEX-SWIS** dataset and machine learning to automatically flag unusual proton flux patterns in specific energy bins.
 
-📖 Overview
-Coronal Mass Ejections are massive bursts of plasma and magnetic field from the Sun’s corona.
-They can have major effects on Earth’s space weather environment, affecting satellites, power grids, and communication systems.
+---
 
-This project:
+## 📖 Overview
+Coronal Mass Ejections are massive bursts of plasma and magnetic field from the Sun’s corona.  
+They can have major effects on Earth’s **space weather** environment, affecting satellites, power grids, and communication systems.  
 
-Loads CDF files from NASA CDAWeb.
+**This project:**
+- 📂 Loads **CDF files** from ISDA (ISRO Science Data Archive)  
+- 🎯 Selects specific **energy bins** from proton flux data  
+- 🔄 Smooths the data to reduce noise  
+- 🤖 Uses **Isolation Forest** to detect anomalies (possible CME events)  
+- 📊 Plots the results with anomalies clearly highlighted  
 
-Selects specific energy bins from proton flux data.
+---
 
-Smooths the data to reduce noise.
-
-Uses Isolation Forest to detect anomalies (possible CME events).
-
-Plots the results with anomalies clearly highlighted.
-
-
-⚙️ Installation
+## ⚙️ Installation
 Clone the repository and install dependencies:
-
-bash
-Copy
-Edit
+```bash
 git clone https://github.com/yourusername/cme-detection.git
 cd cme-detection
 pip install -r requirements.txt
-📥 Data
-This project does not include .cdf files due to size.
-You can download them from NASA CDAWeb:
+```
 
-Go to https https://pradan1.issdc.gov.in/al1/protected/payload.xhtml
 
-Search for the ASPEX-SWIS dataset 
+## 📥 Data
+You can download them from ISDA (ISRO Science Data Archive):
+
+Go to https://pradan1.issdc.gov.in/al1/protected/payload.xhtml
+
+Search for the ASPEX-SWIS dataset
 
 Download .cdf files for your desired date range
 
 Place them in the data/ folder
 
-(Note: The folder in the repository already has a dataset that was used to train the model.)
+Note: The repository already contains a sample dataset used for training the model.
 
-🚀 Usage
+## Usage
 Run the detection script:
 
 bash
@@ -62,7 +59,7 @@ Detect anomalies using Isolation Forest
 
 Plot Bin 5 flux with anomalies highlighted in red
 
-📊 Methodology
+## Methodology
 Data Extraction – Load timestamps and proton flux for selected energy bins
 
 Noise Reduction – Apply rolling mean smoothing
@@ -85,8 +82,9 @@ CDF File → Extract Epoch & Flux
 🖼 Example Output
 The blue curve shows flux intensity over time for Bin 5.
 Red dots indicate timestamps flagged as potential CME events.
+![Example CME Detection Output](Plot_diagram.png)
 
-📦 Requirements
+## Requirements
 Python 3.8+
 
 cdflib
@@ -104,12 +102,10 @@ Copy
 Edit
 pip install -r requirements.txt
 
-Author
-Dinesh Sathvik
+## Author
+Dinesh Sathvik – Space Weather Data Science Enthusiast
 
-
-
-
-
-
+pgsql
+Copy
+Edit
 
