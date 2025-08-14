@@ -103,9 +103,6 @@ Edit
 pip install -r requirements.txt
 
 ## Author
-Dinesh Sathvik – Space Weather Data Science Enthusiast
+Dinesh Sathvik 
 
-pgsql
-Copy
-Edit
 
