@@ -103,6 +103,7 @@ Edit
 pip install -r requirements.txt
 
 ## Author
-Dinesh Sathvik 
+S.Dinesh Sathvik 
+K.Mohith
 
 
