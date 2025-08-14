@@ -1,24 +1,24 @@
-# 🌌 CME Detection using Isolation Forest
+# CME Detection using Isolation Forest
 
 Detect **Coronal Mass Ejection (CME)** events from solar observation CDF files using **unsupervised anomaly detection**.  
 This project leverages **Aditya-L1's ASPEX-SWIS** dataset and machine learning to automatically flag unusual proton flux patterns in specific energy bins.
 
 ---
 
-## 📖 Overview
+## Overview
 Coronal Mass Ejections are massive bursts of plasma and magnetic field from the Sun’s corona.  
 They can have major effects on Earth’s **space weather** environment, affecting satellites, power grids, and communication systems.  
 
 **This project:**
-- 📂 Loads **CDF files** from ISDA (ISRO Science Data Archive)  
-- 🎯 Selects specific **energy bins** from proton flux data  
-- 🔄 Smooths the data to reduce noise  
-- 🤖 Uses **Isolation Forest** to detect anomalies (possible CME events)  
-- 📊 Plots the results with anomalies clearly highlighted  
+-  Loads **CDF files** from ISDA (ISRO Science Data Archive)  
+-  Selects specific **energy bins** from proton flux data  
+-  Smooths the data to reduce noise  
+-  Uses **Isolation Forest** to detect anomalies (possible CME events)  
+-  Plots the results with anomalies clearly highlighted  
 
 ---
 
-## ⚙️ Installation
+##  Installation
 Clone the repository and install dependencies:
 ```bash
 git clone https://github.com/yourusername/cme-detection.git
@@ -27,7 +27,7 @@ pip install -r requirements.txt
 ```
 
 
-## 📥 Data
+##  Data
 You can download them from ISDA (ISRO Science Data Archive):
 
 Go to https://pradan1.issdc.gov.in/al1/protected/payload.xhtml
@@ -79,7 +79,7 @@ CDF File → Extract Epoch & Flux
          → Isolation Forest
          → Anomaly Timestamps
          → Plot Results
-🖼 Example Output
+# Example Output
 The blue curve shows flux intensity over time for Bin 5.
 Red dots indicate timestamps flagged as potential CME events.
 ![Example CME Detection Output](Plot_diagram.png)
